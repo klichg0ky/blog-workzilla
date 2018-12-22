@@ -1,0 +1,98 @@
+@import "../_vars.sass"
+
+#full__news
+	overflow: hidden
+	.news
+		&__content
+			padding-left: 100px
+			width: 80%
+			box-sizing: border-box
+			position: relative
+			bottom: 100px
+			float: left
+			background: $gray
+
+		&__img
+			position: relative
+			img
+				width: 100%
+				max-width: initial
+
+		&__category
+			background: $gray
+			position: absolute
+			top: -25px
+			left: 0
+			padding: 5px 10px
+			font-size: 12px
+			color: $black
+
+		&__title
+			font-size: 45px
+			color: $black
+			font-weight: 300
+			margin-bottom: 40px
+		&__inform
+			text-align: center
+			margin-bottom: 40px
+		&__author
+			font-size: 14px
+			color: $gray2
+			margin-bottom: 5px
+		&__date
+			font-size: 12px
+			color: $gray2
+		&__inner
+			font-size: 18px
+			color: $black
+		&__values
+			width: 20%
+			float: left
+			padding-top: 40px
+			.list-values
+				list-style: none
+				margin: 0
+				padding: 0
+				li
+					display: inline-block
+					width: 100%
+					overflow: hidden
+					color: #BCBCBC
+					line-height: 50px
+					.count
+						font-size: 40px
+						width: 40%
+						float: left
+						margin-right: 2%
+						text-align: right
+					.list__title
+						font-size: 14px
+						float: left
+						width: 49%
+		&__block
+			font-size: 12px
+			margin-top: 40px
+			padding-left: 20px
+			&--title
+				text-transform: uppercase
+				color: $black
+				margin-bottom: 10px
+			.list-category
+				color: #bcbcbc
+				a
+					color: #bcbcbc
+					transition: .5s ease
+					&:hover
+						text-decoration: none
+						color: $red
+			.list-tags
+				color: #bcbcbc
+
+				a
+					display: inline-block
+					background: #bcbcbc
+					padding: 5px 8px
+					color: $black
+					margin-bottom: 5px
+					margin-right: 1px
+					font-size: 12px

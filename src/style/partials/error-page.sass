@@ -1,0 +1,66 @@
+@import "../_vars.sass"
+
+.error-page
+	padding: 20px
+	overflow: hidden
+	.search-block
+		input
+			padding: 10px
+			line-height: 30px
+			outline: none
+			border: solid 1px $gray2
+			height: 30px
+			min-width: 300px
+			background: #fff
+		button
+			height: 30px
+			border: solid 1px $gray2
+	.news-block
+		font-size: 14px
+		.news-block__title
+			font-size: 12px
+			margin-bottom: 20px
+			i
+				margin-right: 10px
+		.news
+			padding-left: 10px
+			position: relative
+			margin-bottom: 3px
+			font-weight: 300
+			padding-top: 5px
+			padding-bottom: 5px
+			transition: .5s ease
+			&:hover
+				background: $fiolet
+				& .news__title, & .news__date
+					color: #fff
+			&:after
+				content: ""
+				position: absolute
+				top: 0
+				left: 0
+				height: 100%
+				width: 2px
+				background: $fiolet
+			&__date
+				font-size: 12px
+				color: $black
+			&__title
+				color: $black
+			&__more
+				margin-top: 10px
+				font-size: 14px
+				color: $black
+				text-align: center
+				text-decoration: none
+				display: inline-block
+				width: 100%
+				&:hover
+					color: $red
+					& i
+						margin-left: 20px
+						color: $red
+				i
+					color: $gray2
+					margin-left: 5px
+					transition: .5s ease

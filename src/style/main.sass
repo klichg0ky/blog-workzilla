@@ -1,0 +1,475 @@
+@import "vars"
+
+body
+	font-family: 'Montserrat', sans-serif
+	margin: 0
+	padding: 0
+	background: $gray
+
+a
+	text-decoration: none
+
+.navbar-site
+	height: 55px
+	border-bottom: solid 1px $gray
+	background: #fff
+	position: fixed
+	width: 100%
+	top: 0
+	left: 0
+	z-index: 99
+	.container-fluid
+		padding-left: 30px
+		padding-right: 30px
+	&__right
+		text-align: right
+		.profile
+			display: inline-block
+			margin-left: 20px
+			font-size: 18px
+			position: relative
+			i
+				color: $gray2
+				transition: .5s ease
+				cursor: pointer
+				position: relative
+				top: 3px
+				&:hover
+					color: $red
+			&__icon
+				position: relative
+
+				&:hover .profile__icon--toolbar
+					visibility: visible
+				&--toolbar
+					position: absolute
+					visibility: hidden
+					z-index: 12
+					left: 50%
+					transform: translateX(-50%)
+					font-size: 10px
+					background: #000
+					padding: 2px 5px
+					line-height: 20px
+					border-radius: 5px
+					color: #fff
+			&__modal			
+				position: absolute
+				display: none
+				z-index: 11
+				background: #fff
+				right: -10px
+				font-size: 12px
+				width: 200px
+				box-shadow: 0 1px 3px rgba($black, .1)
+				line-height: 1.5
+				padding-bottom: 10px
+				&--tabs
+					margin-bottom: 10px
+					overflow: hidden
+					ul
+						margin: 0
+						list-style: none
+						padding: 0
+						li
+							float: left
+							width: 50%
+							text-align: center
+							background: $gray2
+							&.active
+								background: #fff
+								a
+									color: $red
+							a
+								padding: 5px
+								display: block
+								color: #000
+								&:hover
+									color: $red
+				.auth
+					padding: 10px
+					input
+						width: 100%
+						margin-bottom: 10px
+						padding: 8px 10px
+						border-radius: 4px
+						border: solid 1px $gray2
+						font-weight: 300
+						font-size: 12px
+						outline: none
+						&::placeholder
+							color: $black
+					button
+						background: $red
+						border: 0
+						padding: 5px 15px
+						color: #fff
+						font-size: 12px
+						cursor: pointer
+
+		.search
+			display: inline-block
+			input
+				border-bottom: 1px solid $gray2
+				padding-bottom: 5px
+				border-right: 0
+				border-top: 0
+				border-left: 0
+				outline: none
+				color: $gray2
+				font-weight: 300
+				&::placeholder
+					color: $gray2
+			button
+				background: transparent
+				cursor: pointer
+				outline: none
+				border: 0
+				color: $gray2
+	.logo
+		float: left
+		margin-right: 10px
+		img
+			height: 45px
+
+	.description
+		float: left
+		font-size: 12px
+		font-weight: 300
+		color: $black
+
+
+.wrapper
+	position: relative
+	top: 55px
+	display: inline-block
+	width: 100%
+
+
+.content
+	margin-left: 200px
+	min-height: 100vh
+	max-width: 100%
+	&__title
+		padding: 0 15px
+		margin-top: 20px
+		margin-bottom: 20px
+		font-size: 14px
+		font-weight: 700
+#post-block
+	overflow: hidden
+	a:hover .post__overlay, a:hover .post__more
+		opacity: 1
+		visibility: visible
+	.post
+		width: 20%
+		height: 250px
+		background: #fff
+		float: left
+
+		&__inner
+			margin-right: 1px
+			position: relative
+			height: 100%
+			overflow: hidden
+
+		&__overlay
+			opacity: 0
+			visibility: hidden
+			transition: .5s ease
+			background: rgba(#8D6DB9, .5)
+			width: 100%
+			height: 100%
+			position: absolute
+			top: 0
+			left: 0
+			z-index: 1
+		&__more
+			opacity: 0
+			visibility: hidden
+			transition: .5s ease
+			position: absolute
+			right: 10px
+			bottom: 5px
+			z-index: 2
+			color: #fff
+		&__title
+			color: #fff
+			position: absolute
+			left: 10px
+			bottom: 20px
+			text-transform: uppercase
+			font-size: 18px
+			font-weight: 700
+			z-index: 2
+
+
+#subscribe
+	margin: 20px 0
+	padding: 10px 20px
+	.form-block
+		width: 25%
+		float: left
+		box-sizing: border-box
+		padding-right: 2%
+		&:last-child
+			padding-right: 0
+		input
+			width: 100%
+			text-align: center
+			background: #fff
+			border: 0
+			outline: none
+			font-size: 14px
+			line-height: 60px
+			color: #a0a096
+			box-shadow: 0 1px 2px rgba(#000, .1)
+			&::placeholder
+				color: #a0a096
+		button
+			background: $red
+			width: 100%
+			display: inline-block
+			border: 0
+			cursor: pointer
+			color: #fff
+			font-size: 14px
+			font-weight: 700
+			line-height: 60px
+			text-transform: uppercase
+
+
+#full-post__block
+	margin: 30px 0
+	a:hover .full-post__overlay
+		opacity: 1
+		visibility: visible
+	
+.full-post
+	
+
+	&__info
+		width: 90%
+		margin: 0 auto
+		position: relative
+		bottom: 100px
+	&__category
+		font-size: 12px
+		background: #000
+		display: inline-block
+		color: #fff
+		padding: 5px 10px 5px 5px
+		margin-left: 10px
+	&__image
+		position: relative
+	&__title
+		font-size: 36px
+		font-weight: 400
+		color: $black
+		background: #fff
+		padding: 10px
+	&__overlay
+		background: rgba($yellow, .5)
+		position: absolute
+		width: 100%
+		height: 100%
+		top: 0
+		left: 0
+		opacity: 0
+		visibility: hidden
+		transition: .5s ease
+#posts
+	overflow: hidden
+	margin-bottom: 40px
+	.post
+		&__inner
+			position: relative
+			margin-right: 1px
+			&:hover .post__img:after
+				opacity: 1
+				visibility: visible
+			&:hover .post__hidden
+				opacity: 1
+				visibility: visible
+			&:after
+				content: ""
+				position: absolute
+				top: 0
+				left: 0
+				background: #000
+				width: 40px
+				height: 35px
+		&__item
+			width: 33.33%
+			float: left
+			&.blue .post__img
+				&:after
+					background: rgba($blue, .5)
+			&.red .post__img
+				&:after
+					background: rgba($red, .5)
+			&.orange .post__img
+				&:after
+					background: rgba($orange, .5)
+			&.pink .post__img
+				&:after
+					background: rgba($pink, .5)
+			&.yellow .post__img
+				&:after
+					background: rgba($yellow, .5)
+			&.turq .post__img
+				&:after
+					background: rgba($turq, .5)
+
+			&.fiolet .post__img
+				&:after
+					background: rgba($fiolet, .5)
+		&__hidden
+			font-size: 12px
+			color: #fff
+			opacity: 0
+			visibility: hidden
+			position: absolute
+			bottom: 100px
+			font-weight: 700
+			right: 5%
+			i
+				margin-left: 10px
+		&__title
+			width: 90%
+			background: #fff
+			position: relative
+			padding: 20px
+			color: $black
+			bottom: 30px
+			margin: 0 auto
+			font-size: 18px
+			text-transform: uppercase
+		&__img
+			overflow: hidden
+			position: relative
+			&:after
+				content: ""
+				opacity: 0
+				visibility: hidden
+				position: absolute
+				top: 0
+				left: 0
+				height: 100%
+				width: 100%
+				transition: .5s ease
+
+
+#popular
+	overflow: hidden
+	.post
+		width: 20%
+		float: left
+		height: 280px
+		&:hover .post__img
+			&:after
+				opacity: 1
+				visibility: visible
+		&:hover .post__hidden
+			opacity: 1
+			visibility: visible
+		&.blue .post__img
+			&:after
+				background: rgba($blue, .5)
+		&.red .post__img
+			&:after
+				background: rgba($red, .5)
+		&.orange .post__img
+			&:after
+				background: rgba($orange, .5)
+		&.pink .post__img
+			&:after
+				background: rgba($pink, .5)
+		&.yellow .post__img
+			&:after
+				background: rgba($yellow, .5)
+		&.turq .post__img
+			&:after
+				background: rgba($turq, .5)
+
+		&.fiolet .post__img
+			&:after
+				background: rgba($fiolet, .5)
+		&__inner
+			position: relative
+			margin-right: 1px
+		&__views
+			color: #fff
+			font-size: 24px
+			font-weight: 700
+			position: absolute
+			text-align: center
+			z-index: 11
+			top: 50%
+			left: 50%
+			transform: translateY(-50%) translateX(-50%)
+		&__img
+			overflow: hidden
+			position: relative
+			&:after
+				content: ""
+				position: absolute
+				width: 100%
+				height: 100%
+				top: 0
+				left: 0
+				visibility: hidden
+				opacity: 0
+				transition: .5s ease
+		&__title
+			font-size: 18px
+			font-weight: 700
+			color: #fff
+			position: absolute
+			bottom: 20px
+			padding: 0 20px
+			text-transform: uppercase
+			z-index: 10
+		&__hidden
+			position: absolute
+			opacity: 0
+			visibility: hidden
+			right: 5px 
+			bottom: 10px
+			z-index: 99
+			color: #fff
+
+.btn-menu
+	display: none
+
+
+
+
+.clearfix
+	overflow: auto
+
+	&:after
+		content: ""
+		clear: both
+
+.img-fluid
+	width: 100%
+
+.block-right
+	justify-content: flex-end
+
+.block-center
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+
+	
+@import "partials/error-page.sass"
+@import "partials/sidebar.sass"
+@import "partials/fullnews.sass"
+
+
+@import "media.sass"
